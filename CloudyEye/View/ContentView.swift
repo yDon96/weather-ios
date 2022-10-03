@@ -15,6 +15,15 @@ struct VisualEffectView: UIViewRepresentable {
 }
 
 struct ContentView: View {
+    private var city = "MyCity"
+    private var date = "01/01/22"
+    
+    private var hourInfo = [
+        WeatherInfo(hour: "10:00", weatherType: "Sunny", imageName: "slider.vertical.3", temperature: "20~C"),
+        WeatherInfo(hour: "10:00", weatherType: "Sunny", imageName: "slider.vertical.3", temperature: "20~C"),
+        WeatherInfo(hour: "10:00", weatherType: "Sunny", imageName: "slider.vertical.3", temperature: "20~C"),
+        WeatherInfo(hour: "10:00", weatherType: "Sunny", imageName: "slider.vertical.3", temperature: "20~C")
+    ]
     var body: some View {
         NavigationView {
             VStack(alignment: .center) {
@@ -30,10 +39,14 @@ struct ContentView: View {
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 20) {
-                        CapsuleInfoView(infoTag: "hour", infoTitle: "Weather", infoContent: "20~C", infoImageName: "slider.vertical.3")
-                        CapsuleInfoView(infoTag: "hour", infoTitle: "Weather", infoContent: "20~C", infoImageName: "slider.vertical.3")
-                        CapsuleInfoView(infoTag: "hour", infoTitle: "Weather", infoContent: "20~C", infoImageName: "slider.vertical.3")
-                        CapsuleInfoView(infoTag: "hour", infoTitle: "Weather", infoContent: "20~C", infoImageName: "slider.vertical.3")
+                        ForEach(hourInfo, id: \.self) { info in
+                            CapsuleInfoView(
+                                infoTag: info.hour,
+                                infoTitle: info.weatherType,
+                                infoContent: info.temperature,
+                                infoImageName: info.imageName
+                            )
+                        }
                     }
                     .frame(maxHeight: 250)
                 }
@@ -41,10 +54,10 @@ struct ContentView: View {
             .toolbar {
                 ToolbarItem(placement: .principal){
                     VStack(){
-                        Text("City")
+                        Text(city)
                             .font(.title)
                             .padding(5)
-                        Text("Date")
+                        Text(date)
                             .font(.subheadline)
                             
                     }

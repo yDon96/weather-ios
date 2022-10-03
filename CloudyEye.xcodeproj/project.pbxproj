@@ -15,6 +15,7 @@
 		821DFF2428E75A1400D18F07 /* CloudyEyeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821DFF2328E75A1400D18F07 /* CloudyEyeUITests.swift */; };
 		821DFF2628E75A1400D18F07 /* CloudyEyeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821DFF2528E75A1400D18F07 /* CloudyEyeUITestsLaunchTests.swift */; };
 		82456A7128EB296D001F451A /* CapsuleInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82456A7028EB296D001F451A /* CapsuleInfoView.swift */; };
+		827BE22428EB84AF00892A4B /* WeatherInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827BE22328EB84AF00892A4B /* WeatherInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		821DFF2328E75A1400D18F07 /* CloudyEyeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudyEyeUITests.swift; sourceTree = "<group>"; };
 		821DFF2528E75A1400D18F07 /* CloudyEyeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudyEyeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		82456A7028EB296D001F451A /* CapsuleInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleInfoView.swift; sourceTree = "<group>"; };
+		827BE22328EB84AF00892A4B /* WeatherInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		821DFF0728E75A1000D18F07 /* CloudyEye */ = {
 			isa = PBXGroup;
 			children = (
+				827BE22228EB849400892A4B /* Models */,
 				821DFF0828E75A1000D18F07 /* CloudyEyeApp.swift */,
 				821DFF3228E75C8A00D18F07 /* View */,
 				821DFF0C28E75A1300D18F07 /* Assets.xcassets */,
@@ -144,6 +147,14 @@
 				82456A7028EB296D001F451A /* CapsuleInfoView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		827BE22228EB849400892A4B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				827BE22328EB84AF00892A4B /* WeatherInfo.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				827BE22428EB84AF00892A4B /* WeatherInfo.swift in Sources */,
 				821DFF0B28E75A1000D18F07 /* ContentView.swift in Sources */,
 				821DFF0928E75A1000D18F07 /* CloudyEyeApp.swift in Sources */,
 				82456A7128EB296D001F451A /* CapsuleInfoView.swift in Sources */,
