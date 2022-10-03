@@ -95,7 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				821DFF0828E75A1000D18F07 /* CloudyEyeApp.swift */,
-				821DFF0A28E75A1000D18F07 /* ContentView.swift */,
+				821DFF3228E75C8A00D18F07 /* View */,
 				821DFF0C28E75A1300D18F07 /* Assets.xcassets */,
 				821DFF0E28E75A1300D18F07 /* Preview Content */,
 			);
@@ -125,6 +125,22 @@
 				821DFF2528E75A1400D18F07 /* CloudyEyeUITestsLaunchTests.swift */,
 			);
 			path = CloudyEyeUITests;
+			sourceTree = "<group>";
+		};
+		821DFF3228E75C8A00D18F07 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				821DFF0A28E75A1000D18F07 /* ContentView.swift */,
+				821DFF3328E75C9400D18F07 /* Components */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		821DFF3328E75C9400D18F07 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
