@@ -14,6 +14,7 @@
 		821DFF1A28E75A1300D18F07 /* CloudyEyeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821DFF1928E75A1300D18F07 /* CloudyEyeTests.swift */; };
 		821DFF2428E75A1400D18F07 /* CloudyEyeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821DFF2328E75A1400D18F07 /* CloudyEyeUITests.swift */; };
 		821DFF2628E75A1400D18F07 /* CloudyEyeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821DFF2528E75A1400D18F07 /* CloudyEyeUITestsLaunchTests.swift */; };
+		82456A7128EB296D001F451A /* CapsuleInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82456A7028EB296D001F451A /* CapsuleInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		821DFF1F28E75A1400D18F07 /* CloudyEyeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloudyEyeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		821DFF2328E75A1400D18F07 /* CloudyEyeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudyEyeUITests.swift; sourceTree = "<group>"; };
 		821DFF2528E75A1400D18F07 /* CloudyEyeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudyEyeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		82456A7028EB296D001F451A /* CapsuleInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 		821DFF3328E75C9400D18F07 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				82456A7028EB296D001F451A /* CapsuleInfoView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			files = (
 				821DFF0B28E75A1000D18F07 /* ContentView.swift in Sources */,
 				821DFF0928E75A1000D18F07 /* CloudyEyeApp.swift in Sources */,
+				82456A7128EB296D001F451A /* CapsuleInfoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
