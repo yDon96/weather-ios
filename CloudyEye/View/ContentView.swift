@@ -30,30 +30,10 @@ struct ContentView: View {
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 20) {
-                        VStack() {
-                            Text("hour")
-                                .font(.title2)
-                            ZStack {
-                                VisualEffectView(effect: UIBlurEffect(style: .dark)).edgesIgnoringSafeArea(.all)
-                                    .clipShape(Capsule())
-                                    .padding(5)
-                                    
-                                VStack() {
-                                    Text("Weather")
-                                        .font(.subheadline)
-                                        .padding()
-                                        
-                                    Image(systemName: "slider.vertical.3")
-                                        .resizable()
-                                        .frame(width: 30, height: 30)
-                                        .scaledToFit()
-                                    Text("20~C")
-                                        .font(.title3)
-                                        .padding()
-                                }
-                                
-                            }
-                        }
+                        CapsuleInfoView(infoTag: "hour", infoTitle: "Weather", infoContent: "20~C", infoImageName: "slider.vertical.3")
+                        CapsuleInfoView(infoTag: "hour", infoTitle: "Weather", infoContent: "20~C", infoImageName: "slider.vertical.3")
+                        CapsuleInfoView(infoTag: "hour", infoTitle: "Weather", infoContent: "20~C", infoImageName: "slider.vertical.3")
+                        CapsuleInfoView(infoTag: "hour", infoTitle: "Weather", infoContent: "20~C", infoImageName: "slider.vertical.3")
                     }
                     .frame(maxHeight: 250)
                 }
