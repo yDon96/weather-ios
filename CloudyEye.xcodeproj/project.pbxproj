@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8208307E28ECCF9B004E4808 /* HistoricalWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8208307D28ECCF9B004E4808 /* HistoricalWeather.swift */; };
+		8208307E28ECCF9B004E4808 /* ForecastWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8208307D28ECCF9B004E4808 /* ForecastWeather.swift */; };
+		82187F4728ED7F2400B5BD69 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82187F4628ED7F2400B5BD69 /* ApiService.swift */; };
 		821DFF0928E75A1000D18F07 /* CloudyEyeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821DFF0828E75A1000D18F07 /* CloudyEyeApp.swift */; };
 		821DFF0B28E75A1000D18F07 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821DFF0A28E75A1000D18F07 /* ContentView.swift */; };
 		821DFF0D28E75A1300D18F07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 821DFF0C28E75A1300D18F07 /* Assets.xcassets */; };
@@ -37,7 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8208307D28ECCF9B004E4808 /* HistoricalWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalWeather.swift; sourceTree = "<group>"; };
+		8208307D28ECCF9B004E4808 /* ForecastWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastWeather.swift; sourceTree = "<group>"; };
+		82187F4628ED7F2400B5BD69 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		821DFF0528E75A1000D18F07 /* CloudyEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudyEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		821DFF0828E75A1000D18F07 /* CloudyEyeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudyEyeApp.swift; sourceTree = "<group>"; };
 		821DFF0A28E75A1000D18F07 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 		8208307C28ECCDB0004E4808 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				82187F4628ED7F2400B5BD69 /* ApiService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -163,7 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				827BE22328EB84AF00892A4B /* WeatherInfo.swift */,
-				8208307D28ECCF9B004E4808 /* HistoricalWeather.swift */,
+				8208307D28ECCF9B004E4808 /* ForecastWeather.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -300,8 +303,9 @@
 			files = (
 				827BE22428EB84AF00892A4B /* WeatherInfo.swift in Sources */,
 				821DFF0B28E75A1000D18F07 /* ContentView.swift in Sources */,
+				82187F4728ED7F2400B5BD69 /* ApiService.swift in Sources */,
 				821DFF0928E75A1000D18F07 /* CloudyEyeApp.swift in Sources */,
-				8208307E28ECCF9B004E4808 /* HistoricalWeather.swift in Sources */,
+				8208307E28ECCF9B004E4808 /* ForecastWeather.swift in Sources */,
 				82456A7128EB296D001F451A /* CapsuleInfoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
