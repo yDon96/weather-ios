@@ -17,6 +17,7 @@
 		821DFF2428E75A1400D18F07 /* CloudyEyeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821DFF2328E75A1400D18F07 /* CloudyEyeUITests.swift */; };
 		821DFF2628E75A1400D18F07 /* CloudyEyeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821DFF2528E75A1400D18F07 /* CloudyEyeUITestsLaunchTests.swift */; };
 		82456A7128EB296D001F451A /* CapsuleInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82456A7028EB296D001F451A /* CapsuleInfoView.swift */; };
+		82669E4628F16607005D1E10 /* ApiServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82669E4528F16607005D1E10 /* ApiServiceTests.swift */; };
 		827BE22428EB84AF00892A4B /* WeatherInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827BE22328EB84AF00892A4B /* WeatherInfo.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		821DFF2328E75A1400D18F07 /* CloudyEyeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudyEyeUITests.swift; sourceTree = "<group>"; };
 		821DFF2528E75A1400D18F07 /* CloudyEyeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudyEyeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		82456A7028EB296D001F451A /* CapsuleInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleInfoView.swift; sourceTree = "<group>"; };
+		82669E4528F16607005D1E10 /* ApiServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceTests.swift; sourceTree = "<group>"; };
 		827BE22328EB84AF00892A4B /* WeatherInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,6 +133,7 @@
 		821DFF1828E75A1300D18F07 /* CloudyEyeTests */ = {
 			isa = PBXGroup;
 			children = (
+				82669E4428F165DB005D1E10 /* Service */,
 				821DFF1928E75A1300D18F07 /* CloudyEyeTests.swift */,
 			);
 			path = CloudyEyeTests;
@@ -160,6 +163,14 @@
 				82456A7028EB296D001F451A /* CapsuleInfoView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		82669E4428F165DB005D1E10 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				82669E4528F16607005D1E10 /* ApiServiceTests.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		827BE22228EB849400892A4B /* Models */ = {
@@ -314,6 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82669E4628F16607005D1E10 /* ApiServiceTests.swift in Sources */,
 				821DFF1A28E75A1300D18F07 /* CloudyEyeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

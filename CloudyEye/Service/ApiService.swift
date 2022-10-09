@@ -11,7 +11,11 @@ class ApiService {
     
     private let encoder = JSONEncoder()
     private let decoder = JSONDecoder()
+    private let urlSession: URLSession
 
+    init(urlSession: URLSession = URLSession.shared) {
+        self.urlSession = urlSession
+    }
     
     func fetch<Request: Encodable, Response: Decodable>(_ endpoint: Endpoint,
                                                         method: Method = .get,
@@ -28,11 +32,17 @@ class ApiService {
                 callback?(.failure(.internal(reason: "Could not encode body request")))
             }
         }
-        
-        let dataTask = URLSession.shared.dataTask(with: urlRequest){ data, response, error in
+                
+        let dataTask = urlSession.dataTask(with: urlRequest){ data, response, error in
             if let error = error {
                 callback?(.failure(.generic(reason: "Could not fetch data: \(error.localizedDescription)")))
             } else if let data = data {
+                
+                guard let httpResponse = response as? HTTPURLResponse, 200 ..< 300 ~= httpResponse.statusCode else {
+                    callback?(.failure(.generic(reason: "This is a BadRequest")))
+                    return
+                }
+
                 do {
                     let result = try self.decoder.decode(Response.self, from: data)
                     callback?(.success(result))
@@ -76,13 +86,12 @@ extension ApiService {
             components.host = "api.open-meteo.com"
             components.scheme = "https"
             switch self {
-            case .forcast(let query):
-                components.path = "v1/forecast"
-                components.queryItems = [
-                    URLQueryItem(name: "topic", value: query),
-                    URLQueryItem(name: "page", value: "urls")
-                ]
-
+                case .forcast(let query):
+                    components.path = "/v1/forecast"
+                    components.queryItems = [
+                        URLQueryItem(name: "topic", value: query),
+                        URLQueryItem(name: "page", value: "urls")
+                    ]
             }
             return components.url!
         }
