@@ -175,6 +175,36 @@ class ApiServiceTests: XCTestCase {
         }
         wait(for: [promise], timeout: 5)
     }
+    
+    func testEndpointUrlCreation() {
+        struct myStruct:Codable {
+            let a: Int
+            let b: Float
+            let c: String
+            let d: [String]
+        }
+        let url = "https://api.open-meteo.com/v1/forecast?a=5&b=3.40&c=aaa&d=ciao,tuttobene"
+        let quesry = myStruct(a: 5, b: 3.4, c: "aaa", d: ["ciao","tuttobene"])
+        
+        let createdUrl = ApiService.Endpoint.forcast(query: quesry).url.absoluteString
+        
+        XCTAssertEqual(url, createdUrl)
+    }
+    
+    func testEndpointUrlCreationWithNilValue() {
+        struct myStruct:Codable {
+            let a: Int
+            let b: Float
+            let c: String
+            let d: [String]?
+        }
+        let url = "https://api.open-meteo.com/v1/forecast?a=5&b=3.40&c=aaa&d"
+        let quesry = myStruct(a: 5, b: 3.4, c: "aaa", d: nil)
+        
+        let createdUrl = ApiService.Endpoint.forcast(query: quesry).url.absoluteString
+        
+        XCTAssertEqual(url, createdUrl)
+    }
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
