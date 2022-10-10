@@ -79,7 +79,7 @@ extension ApiService {
     }
     
     enum Endpoint {
-        case forcast(query: String)
+        case forcast(query: Codable)
         
         var url: URL {
             var components = URLComponents()
@@ -87,13 +87,72 @@ extension ApiService {
             components.scheme = "https"
             switch self {
                 case .forcast(let query):
+                    let mirror = Mirror(reflecting: query)
+                    var queryItems : [URLQueryItem] = []
+                    mirror.children.forEach { child in
+                        let myQuery = MyURLQueryItem(name: child.label!, value: child.value)
+                        queryItems.append(myQuery.getQueryItem())
+                    }
                     components.path = "/v1/forecast"
-                    components.queryItems = [
-                        URLQueryItem(name: "topic", value: query),
-                        URLQueryItem(name: "page", value: "urls")
-                    ]
+                    components.queryItems = queryItems
             }
             return components.url!
         }
+    }
+}
+
+class MyURLQueryItem {
+    var name: String
+    var value: String?
+    
+    convenience init(name: String, value: Any?) {
+        if let myStringArray = value as? String {
+            self.init(name: name, value: myStringArray)
+        } else if let myStringArray = value as? [String] {
+            self.init(name: name, value: myStringArray)
+        } else if let myStringArray = value as? Float {
+            self.init(name: name, value: myStringArray)
+        } else if let myStringArray = value as? Int {
+            self.init(name: name, value: myStringArray)
+        } else {
+            self.init(name: name)
+        }
+    }
+    
+    init(name: String) {
+        self.name = name
+        self.value = nil
+    }
+    
+    init(name: String, value: String?){
+        self.name = name
+        if let myString = value {
+            self.value = myString
+        }
+    }
+    
+    init(name: String, value: Float?){
+        self.name = name
+        if let myFloat = value {
+            self.value = String(format: "%.2f", myFloat)
+        }
+    }
+    
+   init(name: String, value: Int?){
+        self.name = name
+        if let myInt = value {
+            self.value = String(myInt)
+        }
+    }
+    
+    init(name: String, value: [String]?){
+        self.name = name
+        if let myStringArray = value {
+            self.value = myStringArray.joined(separator: ",")
+        }
+    }
+    
+    func getQueryItem() -> URLQueryItem {
+        return URLQueryItem(name: self.name, value: self.value)
     }
 }
